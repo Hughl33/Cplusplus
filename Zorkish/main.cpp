@@ -8,13 +8,24 @@
 
 #include <iostream>
 #include "Game.h"
+#include "MainMenu.h"
 
 int main(int argc, const char * argv[])
 {
-    Game game = *new Game();
-    while (!game.End()) {
-        game.Render();
-        game.Update();
+    MainMenu menu = *new MainMenu();
+    while (!menu.End()) {
+        menu.Render();
+        menu.Update();
+        if (menu.Start()) {
+            Game game = *new Game();
+            while (menu.Start()) {
+                game.UserInput();
+                game.Render();
+                break;
+                //if (game.CheckInput())
+                //  game.Update();
+            }
+        }
     }
     return 0;
 }

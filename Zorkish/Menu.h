@@ -13,7 +13,7 @@
 class Menu {
 protected:
     std::string title;
-    std::string cont;
+    std::string content;
     std::string hr = "===================================";
 public:
     Menu() {}
