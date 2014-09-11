@@ -35,6 +35,7 @@ public:
     
     bool End();
     bool Start();
+    std::string Mode();
     void Update();
     void Check();
     void Render();

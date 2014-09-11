@@ -10,20 +10,22 @@
 #define __Zorkish__Equipment__
 
 #include <iostream>
+#include "Item.h"
 
 class Equipment {
 private:
-    Item helmet;
-    Item armour;
-    Item shoes;
-    Item gloves;
-    Item trousers;
     Item leftHand;
     Item rightHand;
+    //Item helmet;
+    //Item armour;
+    //Item shoes;
+    //Item gloves;
+    //Item trousers;
     //Item necklace;
     //Item ring;
     
 public:
+    void process();
     
 };
 

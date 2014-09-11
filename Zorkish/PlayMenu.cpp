@@ -8,7 +8,7 @@
 
 #include "PlayMenu.h"
 PlayMenu::PlayMenu() {
-    
+    title = "Play";
 }
 
 void PlayMenu::Render() {
@@ -16,14 +16,13 @@ void PlayMenu::Render() {
     std::cout << "Zorkish :: " << title << std::endl;
     std::cout << hr << std::endl;
     std::cout << "Choose you Adventure:" << std::endl;
-    std::cout << "  1. Mountain World" << std::endl;
-    std::cout << "  2. Water World" << std::endl;
-    std::cout << "  3. Box World" << std::endl;
+    std::cout << "  1. Void World" << std::endl;
+    std::cout << "  2. Adventure World" << std::endl;
 }
 
 int PlayMenu::SelectAdventure() {
-    std::cout << "Select 1-5:> ";
+    std::cout << "Select 1 or 2:> ";
     std::string move;
-    std::cin >> move;
+    std::getline (std::cin,move);
     return atoi(move.c_str());
 }

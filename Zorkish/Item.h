@@ -20,5 +20,6 @@ public:
     std::string getName();
     std::string getType();
     std::string getDesc();
+    void process();
 };
 #endif /* defined(__Zorkish__Item__) */

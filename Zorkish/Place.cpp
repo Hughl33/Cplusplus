@@ -7,11 +7,14 @@
 //
 
 #include "Place.h"
-Place::Place(std::string n, std::string t, std::string d, std::vector<std::string> i) {
+Place::Place() {
+    
+}
+
+Place::Place(std::string n, std::string t, std::string d) {
     name = n;
     type = t;
     desc = d;
-    items = i;
 }
 
 std::string Place::getName() {
@@ -30,6 +33,38 @@ std::string Place::getItem(int i) {
     return items[i];
 }
 
+void Place::addItem(std::string item) {
+    items.push_back(item);
+}
+
+void Place::removeItem(std::string item) {
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i] == item) {
+            items.erase(items.begin() + i);
+        }
+    }
+}
+
+bool Place::hasItem(std::string item) {
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i] == item) return true;
+    }
+    return false;
+}
+
 int Place::itemCount() {
     return (int)items.size();
+}
+
+std::string Place::save() {
+    std::string item = *new std::string();
+    if (items.empty()) {
+        item = "empty";
+    } else {
+        for (int i = 0; i < items.size(); i++) {
+            if (i != 0) item += ",";
+            item += items[i];
+        }
+    }
+    return item;
 }

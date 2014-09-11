@@ -19,12 +19,16 @@ private:
     std::string desc;
     std::vector<std::string> items;
 public:
-    Place(std::string n, std::string t, std::string d, std::vector<std::string> i);
+    Place();
+    Place(std::string n, std::string t, std::string d);
     std::string getName();
     std::string getType();
     std::string getDesc();
     std::string getItem(int i);
+    void addItem(std::string item);
+    void removeItem(std::string item);
+    bool hasItem(std::string item);
     int itemCount();
-    
+    std::string save();
 };
 #endif /* defined(__Zorkish__Place__) */

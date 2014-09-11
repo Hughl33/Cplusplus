@@ -10,19 +10,24 @@
 #define __Zorkish__Game__
 
 #include <iostream>
+#include <string>
 #include "Player.h"
-#include "Data.h"
+#include "Input.h"
+#include "Structure.h"
+#include "Place.h"
 
 class Game {
 private:
     Player player;
+    Structure struc;
+    std::string place;
+    std::string mode;
     std::string move;
 public:
-    Game();
-    void Render();
-    void UserInput();
-    void Update();
-    bool CheckInput();
+    Game(std::string m, Structure s, std::vector<std::string> p);
+    void render();
+    void userInput();
+    void update();
 };
 
 #endif /* defined(__Zorkish__Game__) */

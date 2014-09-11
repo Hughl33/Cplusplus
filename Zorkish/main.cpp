@@ -10,20 +10,25 @@
 #include "Game.h"
 #include "MainMenu.h"
 
-int main(int argc, const char * argv[])
-{
+int main(int argc, const char * argv[]) {
     MainMenu menu = *new MainMenu();
     while (!menu.End()) {
         menu.Render();
         menu.Update();
         if (menu.Start()) {
-            Game game = *new Game();
+            std::vector<std::string> gameState = *new std::vector<std::string>();
+            if (Data::existingSave(menu.Mode())) {
+                gameState = Data::load(menu.Mode());
+            } else {
+                gameState = Data::createNew(menu.Mode());
+            }
+            
+            Game game = *new Game(menu.Mode(), Data::getStructure(), gameState);
+            std::cout << "Welcome to Zorkish: " << menu.Mode() << std::endl;
             while (menu.Start()) {
-                game.UserInput();
-                game.Render();
-                break;
-                //if (game.CheckInput())
-                //  game.Update();
+                game.render();
+                game.userInput();
+                game.update();
             }
         }
     }

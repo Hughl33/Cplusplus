@@ -18,18 +18,15 @@ void MainMenu::SelectMenu(int i) {
             play.Render();
             switch (play.SelectAdventure()) {
                 case 1:
-                    mode = "Mountain World";
+                    mode = "Void";
                     start = true;
                     break;
                 case 2:
-                    mode = "Water World";
-                    start = true;
-                    break;
-                case 3:
-                    mode = "Box World";
+                    mode = "Adventure";
                     start = true;
                     break;
                 default:
+                    std::cout << "Please Select an Option from the List." << std::endl;
                     break;
             };
             break;
@@ -60,9 +57,13 @@ bool MainMenu::Start() {
     return start;
 }
 
+std::string MainMenu::Mode() {
+    return mode;
+}
+
 void MainMenu::Update() {
     std::cout << "Select 1-5:> ";
-    std::cin >> move;
+    std::getline (std::cin,move);
     SelectMenu(atoi(move.c_str()));
 }
 
