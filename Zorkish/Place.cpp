@@ -33,14 +33,30 @@ std::string Place::getItem(int i) {
     return items[i];
 }
 
+std::string Place::getContainer(int i) {
+    return containers[i];
+}
+
 void Place::addItem(std::string item) {
     items.push_back(item);
+}
+
+void Place::addContainer(std::string container) {
+    containers.push_back(container);
 }
 
 void Place::removeItem(std::string item) {
     for (int i = 0; i < items.size(); i++) {
         if (items[i] == item) {
             items.erase(items.begin() + i);
+        }
+    }
+}
+
+void Place::removeContainer(std::string container) {
+    for (int i = 0; i < containers.size(); i++) {
+        if (containers[i] == container) {
+            containers.erase(containers.begin() + i);
         }
     }
 }
@@ -52,11 +68,22 @@ bool Place::hasItem(std::string item) {
     return false;
 }
 
+bool Place::hasContainer(std::string container) {
+    for (int i = 0; i < containers.size(); i++) {
+        if (containers[i] == container) return true;
+    }
+    return false;
+}
+
 int Place::itemCount() {
     return (int)items.size();
 }
 
-std::string Place::save() {
+int Place::containerCount() {
+    return (int)containers.size();
+}
+
+std::string Place::saveItems() {
     std::string item = *new std::string();
     if (items.empty()) {
         item = "empty";
@@ -67,4 +94,17 @@ std::string Place::save() {
         }
     }
     return item;
+}
+
+std::string Place::saveContainers() {
+    std::string container = *new std::string();
+    if (containers.empty()) {
+        container = "empty";
+    } else {
+        for (int i = 0; i < containers.size(); i++) {
+            if (i != 0) container += ",";
+            container += containers[i];
+        }
+    }
+    return container;
 }

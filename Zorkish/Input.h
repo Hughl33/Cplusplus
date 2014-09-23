@@ -15,6 +15,7 @@
 #include "Data.h"
 #include "Player.h"
 #include "Container.h"
+#include "Inventory.h"
 
 class Input {
 private:
@@ -23,6 +24,7 @@ public:
     void static player(std::vector<std::string> input, Player& p, Structure s);//go
     void static info(std::vector<std::string> input, Player& p);//look
     void static item(std::vector<std::string> input, Player& p);//take, drop
+    void static container(std::vector<std::string> input, Player& p);//open, close
     
     //void static attack();//
     //void static defend();

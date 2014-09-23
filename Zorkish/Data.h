@@ -20,6 +20,8 @@
 #include "Place.h"
 #include "Structure.h"
 #include "Node.h"
+#include "Container.h"
+#include "Inventory.h"
 
 class Data {
 public:
@@ -29,6 +31,7 @@ public:
     std::string static toLower(std::string s);
     std::string static toUpper(std::string s);
     std::string static toProper(std::string s);
+    bool static boolean(std::string b);
     bool static equals(std::string a, std::string b);
     bool static canMove(std::string s, std::vector<std::string> m);
     //std::vector<std::string> static getFiles(std::string entity, std::string name, std::string type);
@@ -37,12 +40,19 @@ public:
     Item static getItem(std::string name);
     std::vector<std::string> static getPlaceItems(std::string name);
     Place static getPlace(std::string name);
+    std::vector<std::string> static getPlaceContainers(std::string name);
+    std::vector<std::string> static getContainerItems(std::string name);
+    std::vector<std::string> static getContainers(std::string name);
+    Container static getContainer(std::string place, std::string type);
+    Container static getContainer(std::string ID);
+    
     Structure static getStructure();
+    Inventory static getInventory(std::string name);
     //Enemy static getEnemy();
     
     void static copyFile(std::string file, std::string name);
     void static copyFile(std::string file);
-    void static save(std::string line, std::string name);
+    void static save(std::string line, std::string name, std::string file);
     void static save(std::vector<std::string> file, std::string name);
     std::vector<std::string> static load(std::string name);
     std::vector<std::string> static createNew(std::string name);

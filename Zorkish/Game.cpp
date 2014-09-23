@@ -8,7 +8,7 @@
 
 #include "Game.h"
 
-Game::Game(std::string m, Structure s, std::vector<std::string> p) : player(p[0], atoi(p[1].c_str()), atoi(p[2].c_str()), atoi(p[3].c_str()), atoi(p[4].c_str()), p[5], Data::split(p[6], ',')), struc(s) {
+Game::Game(std::string m, Structure s, std::vector<std::string> p) : player(p[0], p[1], atoi(p[2].c_str()), atoi(p[3].c_str()), atoi(p[4].c_str()), atoi(p[5].c_str()), p[6]), struc(s) {
     mode = m;
     place = " ";
 }

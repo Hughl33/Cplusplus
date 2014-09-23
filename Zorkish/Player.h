@@ -17,22 +17,20 @@
 class Player {
 private:
     std::string name;
+    std::string mode;
     int health;
     int level;
     int experience;
     int score;
     std::string place;
-    std::vector<std::string> inventory;
 public:
-    Player(std::string n, int h, int l, int e, int s, std::string p, std::vector<std::string> i);
+    Player(std::string n, std::string m, int h, int l, int e, int s, std::string p);
     std::string getName();
     int getLevel();
     int getExperience();
     int getScore();
     std::string getPlace();
     void move(std::string p);
-    bool hasItem(std::string item);
-    std::vector<std::string> getInventory();
     void addItem(std::string item);
     void dropItem(std::string item);
     std::vector<std::string> save();

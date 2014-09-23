@@ -16,17 +16,13 @@ class Equipment {
 private:
     Item leftHand;
     Item rightHand;
-    //Item helmet;
-    //Item armour;
-    //Item shoes;
-    //Item gloves;
-    //Item trousers;
-    //Item necklace;
-    //Item ring;
-    
+    //Item head;
+    //Item torso;
+    //Item feet;
+    //Item hands;
+    //Item legs;
 public:
-    void process();
-    
+    Equipment();
 };
 
 #endif /* defined(__Zorkish__Equipment__) */
