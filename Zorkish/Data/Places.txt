@@ -1,0 +1,5 @@
+home|place|Ah Home Sweet Home. A one room house is the way to go. You can go: North outside the house
+cave|place|Damp... There is nothing but a dead head here. You can go: North to the Beach, West to the Lake.
+lake|place|Beautiful... But no way to get across, because you can't swim. You can go: South into the house, West to the Forest, East to the Cave.
+forest|place|The trees are so high not a lot of light is coming through. You can go: East to the Lake.
+beach|place|The ocean is so beautiful. I wish I could swim... You can go: South into the Cave.

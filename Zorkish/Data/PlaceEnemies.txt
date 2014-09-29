@@ -1,0 +1,5 @@
+home|empty
+cave|empty
+lake|empty
+forest|ogre
+beach|empty

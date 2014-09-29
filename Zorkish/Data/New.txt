@@ -1,0 +1,7 @@
+player
+New
+100
+10
+50
+0
+Home

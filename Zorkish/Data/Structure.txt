@@ -1,0 +1,5 @@
+Home|North:Lake
+Lake|South:Home,East:Cave,West:Forest
+Cave|West:Lake,North:Beach
+Beach|South:Cave
+Forest|East:Lake

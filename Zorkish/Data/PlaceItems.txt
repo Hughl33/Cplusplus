@@ -1,0 +1,5 @@
+home|sword,shield
+cave|rock,stick
+lake|water,fish
+forest|beetle,axe
+beach|sand,seaweed

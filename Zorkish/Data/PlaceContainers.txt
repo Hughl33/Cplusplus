@@ -1,0 +1,5 @@
+home|1,2
+cave|3
+lake|4
+forest|5
+beach|6

@@ -1,0 +1,6 @@
+1|bag|false|empty
+2|chest|false|gold,silver
+3|chest|false|silver
+4|chest|false|iron
+5|chest|false|steel
+6|chest|false|coal

@@ -1,0 +1,5 @@
+ogre|amulet
+skeleton|amulet
+slime|amulet
+wizard|amulet
+zombie|amulet
