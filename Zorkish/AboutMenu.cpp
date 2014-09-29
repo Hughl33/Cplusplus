@@ -17,7 +17,6 @@ void AboutMenu::Render() {
     std::cout << hr << std::endl;
     std::cout << "Written by: Hugh Lee (OysterFinish)" << std::endl;
     std::cout << std::endl;
-    std::cout << "Press ESC or Enter to return to the Main Menu" << std::endl;
-    std::cin.get();
+    std::cout << "Press Enter to return to the Main Menu" << std::endl;
     std::cin.get();
 }

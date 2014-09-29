@@ -37,12 +37,20 @@ std::string Place::getContainer(int i) {
     return containers[i];
 }
 
+std::string Place::getEnemy(int i) {
+    return enemies[i];
+}
+
 void Place::addItem(std::string item) {
     items.push_back(item);
 }
 
 void Place::addContainer(std::string container) {
     containers.push_back(container);
+}
+
+void Place::addEnemy(std::string enemy) {
+    enemies.push_back(enemy);
 }
 
 void Place::removeItem(std::string item) {
@@ -61,8 +69,17 @@ void Place::removeContainer(std::string container) {
     }
 }
 
+void Place::removeEnemy(std::string enemy) {
+    for (int i = 0; i < enemies.size(); i++) {
+        if (enemies[i] == enemy) {
+            enemies.erase(enemies.begin() + i);
+        }
+    }
+}
+
 bool Place::hasItem(std::string item) {
     for (int i = 0; i < items.size(); i++) {
+//        std::cout << items[i] << ", " << item << std::endl;
         if (items[i] == item) return true;
     }
     return false;
@@ -75,12 +92,23 @@ bool Place::hasContainer(std::string container) {
     return false;
 }
 
+bool Place::hasEnemy(std::string enemy) {
+    for (int i = 0; i < enemies.size(); i++) {
+        if (enemies[i] == enemy) return true;
+    }
+    return false;
+}
+
 int Place::itemCount() {
     return (int)items.size();
 }
 
 int Place::containerCount() {
     return (int)containers.size();
+}
+
+int Place::enemyCount() {
+    return (int)enemies.size();
 }
 
 std::string Place::saveItems() {
@@ -107,4 +135,17 @@ std::string Place::saveContainers() {
         }
     }
     return container;
+}
+
+std::string Place::saveEnemies() {
+    std::string enemy = *new std::string();
+    if (enemies.empty()) {
+        enemy = "empty";
+    } else {
+        for (int i = 0; i < enemies.size(); i++) {
+            if (i != 0) enemy += ",";
+            enemy += enemies[i];
+        }
+    }
+    return enemy;
 }

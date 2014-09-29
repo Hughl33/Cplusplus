@@ -22,6 +22,7 @@
 #include "Node.h"
 #include "Container.h"
 #include "Inventory.h"
+#include "Enemy.h"
 
 class Data {
 public:
@@ -37,15 +38,19 @@ public:
     //std::vector<std::string> static getFiles(std::string entity, std::string name, std::string type);
     
     std::string static getMenu(std::string name);
+    std::vector<std::string> static getHOF();
     Item static getItem(std::string name);
     std::vector<std::string> static getPlaceItems(std::string name);
     Place static getPlace(std::string name);
     std::vector<std::string> static getPlaceContainers(std::string name);
+    std::vector<std::string> static getPlaceEnemies(std::string name);
     std::vector<std::string> static getContainerItems(std::string name);
     std::vector<std::string> static getContainers(std::string name);
     Container static getContainer(std::string place, std::string type);
     Container static getContainer(std::string ID);
-    
+    Enemy static getEnemy(std::string name);
+    std::vector<std::string> static getEnemyItems(std::string name);
+    Container static createCorpse(std::string name);
     Structure static getStructure();
     Inventory static getInventory(std::string name);
     //Enemy static getEnemy();
@@ -54,6 +59,8 @@ public:
     void static copyFile(std::string file);
     void static save(std::string line, std::string name, std::string file);
     void static save(std::vector<std::string> file, std::string name);
+    void static save(std::string line, std::string file);
+    void static clearSave(std::string save);
     std::vector<std::string> static load(std::string name);
     std::vector<std::string> static createNew(std::string name);
     bool static existingSave(std::string name); //redundant if multiple saves are implemented

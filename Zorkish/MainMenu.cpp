@@ -67,8 +67,8 @@ void MainMenu::Update() {
     SelectMenu(atoi(move.c_str()));
 }
 
-void MainMenu::Check() {
-    
+void MainMenu::Finish() {
+    start = false;
 }
 
 void MainMenu::Render() {

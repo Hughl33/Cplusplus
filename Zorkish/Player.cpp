@@ -8,14 +8,15 @@
 
 #include "Player.h"
 
-Player::Player(std::string n, std::string m, int h, int l, int e, int s, std::string p) {
+Player::Player(std::string n, std::string m, int h, int d, int c, int s, std::string p) {
     name = n;
     mode = m;
     health = h;
-    level = l;
-    experience = e;
+    damage = d;
+    chance = c;
     score = s;
     place = p;
+    won = false;
 }
 
 
@@ -23,12 +24,16 @@ std::string Player::getName() {
     return name;
 }
 
-int Player::getLevel() {
-    return level;
+int Player::getHealth() {
+    return health;
 }
 
-int Player::getExperience() {
-    return experience;
+int Player::getDamage() {
+    return damage;
+}
+
+int Player::getChance() {
+    return chance;
 }
 
 int Player::getScore() {
@@ -43,13 +48,26 @@ void Player::move(std::string p) {
     place = p;
 }
 
+void Player::takeDamage(int d) {
+    health -= d;
+}
+
+bool Player::getWin() {
+    return won;
+}
+
+void Player::setWin() {
+    won = true;
+}
+
 std::vector<std::string> Player::save() {
     std::string item = *new std::string();
     std::vector<std::string> temp = *new std::vector<std::string>();
     temp.push_back(name);
+    temp.push_back(mode);
     temp.push_back(std::to_string(health));
-    temp.push_back(std::to_string(level));
-    temp.push_back(std::to_string(experience));
+    temp.push_back(std::to_string(damage));
+    temp.push_back(std::to_string(chance));
     temp.push_back(std::to_string(score));
     temp.push_back(place);
     return temp;

@@ -12,6 +12,14 @@ HallOfFameMenu::HallOfFameMenu() {
 }
 
 void HallOfFameMenu::Render() {
-    std::cin.get();
+    std::vector<std::string> hof = Data::getHOF();
+    std::cout << hr << std::endl;
+    std::cout << "Zorkish :: " << title << std::endl;
+    std::cout << hr << std::endl;
+    for (int i = 0; i < hof.size(); i++) {
+        std::cout << hof[i] << std::endl;
+    }
+    std::cout << std::endl;
+    std::cout << "Press Enter to return to the Main Menu" << std::endl;
     std::cin.get();
 }

@@ -19,14 +19,14 @@ private:
     std::string desc;
     int hp;
     int atk;
-    int def;
+    int chance;
 public:
-    Enemy();
+    Enemy(std::string n, int h, int a, int c, std::string d);
     std::string getName();
     std::string getDesc();
     int getHP();
     int getAtk();
-    int getDef();
-    
+    int getChance();
+    void takeDamage(int d);
 };
 #endif /* defined(__Zorkish__Enemy__) */

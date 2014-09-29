@@ -29,7 +29,15 @@ int main(int argc, const char * argv[]) {
                 game.render();
                 game.userInput();
                 game.update();
+                if (game.endGame()) {
+                    break;
+                }
             }
+            if (game.outcome()) {
+                menu.SelectMenu(2);
+            }
+            menu.Finish();
+            Data::clearSave(menu.Mode());
         }
     }
     return 0;

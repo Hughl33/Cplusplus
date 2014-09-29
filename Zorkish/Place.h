@@ -19,6 +19,7 @@ private:
     std::string desc;
     std::vector<std::string> items;
     std::vector<std::string> containers;
+    std::vector<std::string> enemies;
 public:
     Place();
     Place(std::string n, std::string t, std::string d);
@@ -27,15 +28,21 @@ public:
     std::string getDesc();
     std::string getContainer(int i);
     std::string getItem(int i);
+    std::string getEnemy(int i);
     void addItem(std::string item);
     void addContainer(std::string container);
+    void addEnemy(std::string enemy);
     void removeItem(std::string item);
     void removeContainer(std::string container);
+    void removeEnemy(std::string enemy);
     bool hasItem(std::string item);
     bool hasContainer(std::string container);
+    bool hasEnemy(std::string enemy);
     int itemCount();
     int containerCount();
+    int enemyCount();
     std::string saveItems();
     std::string saveContainers();
+    std::string saveEnemies();
 };
 #endif /* defined(__Zorkish__Place__) */

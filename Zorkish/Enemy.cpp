@@ -7,8 +7,12 @@
 //
 
 #include "Enemy.h"
-Enemy::Enemy() {
-    
+Enemy::Enemy(std::string n, int h, int a, int c, std::string d) {
+    name = n;
+    hp = h;
+    atk = a;
+    chance = c;
+    desc = d;
 }
 
 std::string Enemy::getName() {
@@ -27,6 +31,10 @@ int Enemy::getAtk() {
     return atk;
 }
 
-int Enemy::getDef() {
-    return def;
+int Enemy::getChance() {
+    return chance;
+}
+
+void Enemy::takeDamage(int d) {
+    hp -= d;
 }

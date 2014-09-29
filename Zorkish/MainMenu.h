@@ -37,7 +37,7 @@ public:
     bool Start();
     std::string Mode();
     void Update();
-    void Check();
+    void Finish();
     void Render();
 };
 

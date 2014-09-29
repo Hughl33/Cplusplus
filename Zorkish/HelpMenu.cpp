@@ -19,7 +19,6 @@ void HelpMenu::Render() {
     std::cout << "  quit" << std::endl;
     std::cout << "  hiscore (for testing)" << std::endl;
     std::cout << std::endl;
-    std::cout << "Press ESC or Enter to return to the Main Menu" << std::endl;
-    std::cin.get();
+    std::cout << "Press Enter to return to the Main Menu" << std::endl;
     std::cin.get();
 }

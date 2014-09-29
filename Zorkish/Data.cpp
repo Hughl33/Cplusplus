@@ -95,6 +95,22 @@ std::string Data::getMenu(std::string name) {
     return data;
 }
 
+std::vector<std::string> Data::getHOF() {
+    std::vector<std::string> data;
+    std::string line;
+    std::ifstream myfile("Data/HOF.txt");
+    
+    if (myfile.is_open()) {
+        while (getline (myfile,line)) {
+            data.push_back(line);
+        }
+        myfile.close();
+    }
+    else std::cout << "Unable to open file" << std::endl;
+    
+    return data;
+}
+
 Item Data::getItem(std::string name) {
     std::vector<std::string> data;
     std::string line;
@@ -180,6 +196,11 @@ Place Data::getPlace(std::string name) {
             for (int i = 0; i < data.size(); i++) {
                 place.addContainer(data[i]);
             }
+            
+            data = Data::getPlaceEnemies(name);
+            for (int i = 0; i < data.size(); i++) {
+                place.addEnemy(data[i]);
+            }
             return place;
         } else {
             Place place = *new Place(" ", " ", " ");
@@ -190,6 +211,96 @@ Place Data::getPlace(std::string name) {
         Place place = *new Place(NULL, NULL, NULL);
         return place;
     }
+}
+
+Enemy Data::getEnemy(std::string name) {
+    std::vector<std::string> data;
+    std::string line;
+    bool found = false;
+    std::ifstream myfile("Data/Enemies.txt");
+    
+    if (myfile.is_open()) {
+        while (getline (myfile,line)) {
+            if (equals(line.substr(0, name.length()), name)) {
+                found = true;
+                break;
+            }
+        }
+        myfile.close();
+        
+        if (found) {
+            data = Data::split(line, '|');
+            Enemy enemy = *new Enemy(data[0], atoi(data[1].c_str()), atoi(data[2].c_str()), atoi(data[3].c_str()), data[4]);
+            return enemy;
+        } else {
+            Enemy enemy = *new Enemy(" ", 0, 0, 0, " ");
+            return enemy;
+        }
+    } else {
+        std::cout << "Unable to open file" << std::endl;
+        Enemy enemy = *new Enemy(" ", 0, 0, 0, " ");
+        return enemy;
+    }
+}
+
+std::vector<std::string> Data::getEnemyItems(std::string name) {
+    std::vector<std::string> data = *new std::vector<std::string>();
+    std::string line;
+    bool found = false;
+    std::ifstream myfile("EnemyItems.txt");
+    
+    if (myfile.is_open()) {
+        while (getline (myfile,line)) {
+            if (equals(line.substr(0, name.length()), name)) {
+                found = true;
+                break;
+            }
+        }
+        myfile.close();
+        
+        if (found) {
+            if (!equals(Data::split(line, '|')[1], "empty")) {
+                data = Data::split(Data::split(line, '|')[1], ',');
+            }
+        }
+        return data;
+    } else {
+        std::cout << "Unable to open file" << std::endl;
+        return data;
+    }
+}
+
+std::vector<std::string> Data::getPlaceEnemies(std::string name) {
+    std::vector<std::string> data = *new std::vector<std::string>();
+    std::string line;
+    bool found = false;
+    std::ifstream myfile("PlaceEnemies.txt");
+    
+    if (myfile.is_open()) {
+        while (getline (myfile,line)) {
+            if (equals(line.substr(0, name.length()), name)) {
+                found = true;
+                break;
+            }
+        }
+        myfile.close();
+        
+        if (found) {
+            if (!equals(Data::split(line, '|')[1], "empty")) {
+                data = Data::split(Data::split(line, '|')[1], ',');
+            }
+        }
+        return data;
+    } else {
+        std::cout << "Unable to open file" << std::endl;
+        return data;
+    }
+}
+
+Container Data::createCorpse(std::string name) {
+    Enemy enemy = getEnemy(name);
+    Container temp = *new Container(name, "corpse", enemy.getDesc(), 10, false, false, getEnemyItems(name));
+    return temp;
 }
 
 Structure Data::getStructure() {
@@ -336,6 +447,9 @@ Container Data::getContainer(std::string place, std::string type) {
 
 Container Data::getContainer(std::string ID) {
     std::vector<std::string> items = getContainerItems(ID);
+//    for (int i = 0; i < items.size(); i++) {
+//        std::cout << items[i] << std::endl;
+//    }
     std::vector<std::string> data = getContainers(items[1]);
     bool found = false;
     
@@ -419,6 +533,17 @@ void Data::save(std::string line, std::string name, std::string file) {
     myfile.close();
 }
 
+void Data::save(std::string line, std::string file) {
+    std::vector<std::string> temp = load(file);
+    temp.push_back(line);
+    
+    std::ofstream myfile(file + ".txt");
+    for (int i = 0; i < temp.size(); i++) {
+        myfile << temp[i] + "\n";
+    }
+    myfile.close();
+}
+
 std::vector<std::string> Data::load(std::string name) {
     std::string temp;
     std::vector<std::string> lines = *new std::vector<std::string>();
@@ -433,7 +558,7 @@ std::vector<std::string> Data::load(std::string name) {
 }
 
 std::vector<std::string> Data::createNew(std::string name) {
-    std::vector<std::string> files = {"New.txt", "PlaceItems.txt", "ContainerItems.txt", "PlaceContainers.txt", "Inventory.txt"};
+    std::vector<std::string> files = {"New.txt", "PlaceItems.txt", "ContainerItems.txt", "EnemyItems.txt", "PlaceContainers.txt", "PlaceEnemies.txt", "Inventory.txt"};
     for (int i = 0; i < files.size(); i++) {
         if (i == 0) {
             copyFile(files[i], name);
@@ -442,6 +567,13 @@ std::vector<std::string> Data::createNew(std::string name) {
         }
     }
     return load(name);
+}
+
+void Data::clearSave(std::string save) {
+    std::vector<std::string> files = {save + ".txt", "PlaceItems.txt", "ContainerItems.txt", "EnemyItems.txt", "PlaceContainers.txt", "PlaceEnemies.txt", "Inventory.txt"};
+    for (int i = 0; i < files.size(); i++) {
+        remove(files[i].c_str());
+    }
 }
 
 bool Data::existingSave(std::string name) {

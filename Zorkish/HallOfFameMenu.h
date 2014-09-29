@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Menu.h"
+#include "Data.h"
 
 class HallOfFameMenu: public Menu {
 private:
