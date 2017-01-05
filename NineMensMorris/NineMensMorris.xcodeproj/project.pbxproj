@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E3977DE1CE05EBE001A5FDE /* libncurses.5.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3977DD1CE05EBD001A5FDE /* libncurses.5.4.dylib */; };
+		1EC8D46F1B0F35BE0066C3FF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D46E1B0F35BE0066C3FF /* main.cpp */; };
+		1EC8D4711B0F35BE0066C3FF /* NineMensMorris.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1EC8D4701B0F35BE0066C3FF /* NineMensMorris.1 */; };
+		1EC8D47F1B0F391C0066C3FF /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D47D1B0F391C0066C3FF /* Game.cpp */; };
+		1EC8D4821B0F39320066C3FF /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4801B0F39320066C3FF /* Board.cpp */; };
+		1EC8D4851B0F393B0066C3FF /* Piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4831B0F393B0066C3FF /* Piece.cpp */; };
+		1EC8D4881B0F39440066C3FF /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4861B0F39440066C3FF /* Player.cpp */; };
+		1EC8D48E1B0F39B80066C3FF /* Vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D48C1B0F39B80066C3FF /* Vertex.cpp */; };
+		1EC8D49A1B0F39D90066C3FF /* Move.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4981B0F39D90066C3FF /* Move.cpp */; };
+		1EC8D4AC1B0F3A150066C3FF /* Mill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4AA1B0F3A150066C3FF /* Mill.cpp */; };
+		1EC8D4B81B0F3A400066C3FF /* Setup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4B61B0F3A400066C3FF /* Setup.cpp */; };
+		1EC8D4D61B18B5170066C3FF /* Interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8D4D41B18B5170066C3FF /* Interface.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1EC8D4691B0F35BE0066C3FF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				1EC8D4711B0F35BE0066C3FF /* NineMensMorris.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E3977DA1CE03063001A5FDE /* Set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		1E3977DD1CE05EBD001A5FDE /* libncurses.5.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.5.4.dylib; path = ../../../../../usr/lib/libncurses.5.4.dylib; sourceTree = "<group>"; };
+		1E3977E71CE08116001A5FDE /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		1E3977E81CE085DD001A5FDE /* Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		1EC8D46B1B0F35BE0066C3FF /* NineMensMorris */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NineMensMorris; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC8D46E1B0F35BE0066C3FF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1EC8D4701B0F35BE0066C3FF /* NineMensMorris.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NineMensMorris.1; sourceTree = "<group>"; };
+		1EC8D47D1B0F391C0066C3FF /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		1EC8D47E1B0F391C0066C3FF /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		1EC8D4801B0F39320066C3FF /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		1EC8D4811B0F39320066C3FF /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		1EC8D4831B0F393B0066C3FF /* Piece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Piece.cpp; sourceTree = "<group>"; };
+		1EC8D4841B0F393B0066C3FF /* Piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Piece.h; sourceTree = "<group>"; };
+		1EC8D4861B0F39440066C3FF /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		1EC8D4871B0F39440066C3FF /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		1EC8D48C1B0F39B80066C3FF /* Vertex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertex.cpp; sourceTree = "<group>"; };
+		1EC8D48D1B0F39B80066C3FF /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		1EC8D4981B0F39D90066C3FF /* Move.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Move.cpp; sourceTree = "<group>"; };
+		1EC8D4991B0F39D90066C3FF /* Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move.h; sourceTree = "<group>"; };
+		1EC8D4AA1B0F3A150066C3FF /* Mill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mill.cpp; sourceTree = "<group>"; };
+		1EC8D4AB1B0F3A150066C3FF /* Mill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mill.h; sourceTree = "<group>"; };
+		1EC8D4B61B0F3A400066C3FF /* Setup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Setup.cpp; sourceTree = "<group>"; };
+		1EC8D4B71B0F3A400066C3FF /* Setup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setup.h; sourceTree = "<group>"; };
+		1EC8D4C61B118A020066C3FF /* Point2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point2d.h; sourceTree = "<group>"; };
+		1EC8D4D11B1345290066C3FF /* PlayState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayState.h; sourceTree = "<group>"; };
+		1EC8D4D21B153E650066C3FF /* Colour.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
+		1EC8D4D41B18B5170066C3FF /* Interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interface.cpp; sourceTree = "<group>"; };
+		1EC8D4D51B18B5170066C3FF /* Interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		1EC8D4D71B196CA90066C3FF /* LastMove.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastMove.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EC8D4681B0F35BE0066C3FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3977DE1CE05EBE001A5FDE /* libncurses.5.4.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EC8D4621B0F35BE0066C3FF = {
+			isa = PBXGroup;
+			children = (
+				1E3977DD1CE05EBD001A5FDE /* libncurses.5.4.dylib */,
+				1EC8D46D1B0F35BE0066C3FF /* NineMensMorris */,
+				1EC8D46C1B0F35BE0066C3FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EC8D46C1B0F35BE0066C3FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EC8D46B1B0F35BE0066C3FF /* NineMensMorris */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EC8D46D1B0F35BE0066C3FF /* NineMensMorris */ = {
+			isa = PBXGroup;
+			children = (
+				1EC8D4701B0F35BE0066C3FF /* NineMensMorris.1 */,
+				1EC8D4801B0F39320066C3FF /* Board.cpp */,
+				1EC8D47D1B0F391C0066C3FF /* Game.cpp */,
+				1EC8D4D41B18B5170066C3FF /* Interface.cpp */,
+				1EC8D46E1B0F35BE0066C3FF /* main.cpp */,
+				1EC8D4AA1B0F3A150066C3FF /* Mill.cpp */,
+				1EC8D4981B0F39D90066C3FF /* Move.cpp */,
+				1EC8D4831B0F393B0066C3FF /* Piece.cpp */,
+				1EC8D4861B0F39440066C3FF /* Player.cpp */,
+				1EC8D4B61B0F3A400066C3FF /* Setup.cpp */,
+				1EC8D48C1B0F39B80066C3FF /* Vertex.cpp */,
+				1EC8D4811B0F39320066C3FF /* Board.h */,
+				1EC8D47E1B0F391C0066C3FF /* Game.h */,
+				1EC8D4D51B18B5170066C3FF /* Interface.h */,
+				1EC8D4AB1B0F3A150066C3FF /* Mill.h */,
+				1EC8D4991B0F39D90066C3FF /* Move.h */,
+				1EC8D4841B0F393B0066C3FF /* Piece.h */,
+				1EC8D4871B0F39440066C3FF /* Player.h */,
+				1EC8D4B71B0F3A400066C3FF /* Setup.h */,
+				1EC8D48D1B0F39B80066C3FF /* Vertex.h */,
+				1EC8D4CE1B11C7600066C3FF /* Types */,
+			);
+			path = NineMensMorris;
+			sourceTree = "<group>";
+		};
+		1EC8D4CE1B11C7600066C3FF /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				1EC8D4D21B153E650066C3FF /* Colour.h */,
+				1E3977E81CE085DD001A5FDE /* Layout.h */,
+				1EC8D4D71B196CA90066C3FF /* LastMove.h */,
+				1E3977E71CE08116001A5FDE /* Link.h */,
+				1EC8D4D11B1345290066C3FF /* PlayState.h */,
+				1EC8D4C61B118A020066C3FF /* Point2d.h */,
+				1E3977DA1CE03063001A5FDE /* Set.h */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EC8D46A1B0F35BE0066C3FF /* NineMensMorris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EC8D4741B0F35BE0066C3FF /* Build configuration list for PBXNativeTarget "NineMensMorris" */;
+			buildPhases = (
+				1EC8D4671B0F35BE0066C3FF /* Sources */,
+				1EC8D4681B0F35BE0066C3FF /* Frameworks */,
+				1EC8D4691B0F35BE0066C3FF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NineMensMorris;
+			productName = NineMensMorris;
+			productReference = 1EC8D46B1B0F35BE0066C3FF /* NineMensMorris */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EC8D4631B0F35BE0066C3FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = OysterFinish;
+			};
+			buildConfigurationList = 1EC8D4661B0F35BE0066C3FF /* Build configuration list for PBXProject "NineMensMorris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1EC8D4621B0F35BE0066C3FF;
+			productRefGroup = 1EC8D46C1B0F35BE0066C3FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EC8D46A1B0F35BE0066C3FF /* NineMensMorris */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EC8D4671B0F35BE0066C3FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC8D4851B0F393B0066C3FF /* Piece.cpp in Sources */,
+				1EC8D4821B0F39320066C3FF /* Board.cpp in Sources */,
+				1EC8D4B81B0F3A400066C3FF /* Setup.cpp in Sources */,
+				1EC8D48E1B0F39B80066C3FF /* Vertex.cpp in Sources */,
+				1EC8D49A1B0F39D90066C3FF /* Move.cpp in Sources */,
+				1EC8D46F1B0F35BE0066C3FF /* main.cpp in Sources */,
+				1EC8D47F1B0F391C0066C3FF /* Game.cpp in Sources */,
+				1EC8D4D61B18B5170066C3FF /* Interface.cpp in Sources */,
+				1EC8D4881B0F39440066C3FF /* Player.cpp in Sources */,
+				1EC8D4AC1B0F3A150066C3FF /* Mill.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1EC8D4721B0F35BE0066C3FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1EC8D4731B0F35BE0066C3FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1EC8D4751B0F35BE0066C3FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/1.10.0/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EC8D4761B0F35BE0066C3FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/1.10.0/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EC8D4661B0F35BE0066C3FF /* Build configuration list for PBXProject "NineMensMorris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EC8D4721B0F35BE0066C3FF /* Debug */,
+				1EC8D4731B0F35BE0066C3FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EC8D4741B0F35BE0066C3FF /* Build configuration list for PBXNativeTarget "NineMensMorris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EC8D4751B0F35BE0066C3FF /* Debug */,
+				1EC8D4761B0F35BE0066C3FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EC8D4631B0F35BE0066C3FF /* Project object */;
+}

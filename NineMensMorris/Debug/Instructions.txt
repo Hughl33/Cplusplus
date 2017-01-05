@@ -1,0 +1,37 @@
+INSTRUCTIONS
+
+Players take turns to place
+their pieces onto the empty
+spots on the board.
+
+If you form a line of 3
+pieces (a Mill), click to
+remove one of the other
+player's pieces.
+
+Pieces of a formed mill can't
+be removed unless no other
+piece are left on the board.
+
+After all pieces are used,
+the pieces on the board can
+be moved.
+
+Select one of your pieces and
+move them to an adjacent
+empty spot to move.
+
+If you cannot make a valid
+move, you lose.
+
+If you are left with 3 pieces
+your pieces will gain the
+ability to 'fly' and can be
+moved to any vacant spot on
+the board.
+
+If you remove the other
+player's pieces till they
+have less that 3 pieces
+before they do it to you, you
+win the game!
